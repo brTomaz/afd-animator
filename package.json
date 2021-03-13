@@ -7,6 +7,7 @@
   "author": "brTomaz <bruno.tomaz@aluno.ufop.edu.br>",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.34",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.1-alpha.6",
@@ -17,7 +18,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "git-commit-msg-linter": "^3.0.2",
     "husky": "^5.1.3",
+    "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
+    "ts-jest": "^26.5.3",
     "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
