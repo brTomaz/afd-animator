@@ -7,6 +7,8 @@
   "author": "brTomaz <bruno.tomaz@aluno.ufop.edu.br>",
   "license": "MIT",
   "devDependencies": {
-    "git-commit-msg-linter": "^3.0.2"
+    "@types/node": "^14.14.34",
+    "git-commit-msg-linter": "^3.0.2",
+    "typescript": "^4.2.3"
   }
 }
