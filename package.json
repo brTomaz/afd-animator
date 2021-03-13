@@ -1,0 +1,9 @@
+{
+  "name": "afd-animator",
+  "version": "1.0.0",
+  "description": "The project consists of producing a frame for each stage of the instantaneous configuration of a machine.",
+  "main": "index.js",
+  "repository": "https://github.com/brTomaz/afd-animator",
+  "author": "brTomaz <bruno.tomaz@aluno.ufop.edu.br>",
+  "license": "MIT"
+}
