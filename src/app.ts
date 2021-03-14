@@ -3,28 +3,26 @@ import path from 'path';
 import chalk from 'chalk';
 
 import Automata from './entities/Automata';
-import State from './entities/State';
-import fillTransitionAutomataFunction from './helpers/fill-transition-automata-function';
-import generateAnimation from './helpers/generate-animation';
-import generateDotFiles from './helpers/generate-dot-files';
-import generateImages from './helpers/generate-images';
 import getInputFileData from './utils/get-input-file-data';
+import {
+  fillTransitionAutomataFunction,
+  generateAnimation,
+  generateDotFiles,
+  generateImages,
+  getInitialAndFinalStates,
+  getWord,
+  splitFileIntoLines,
+} from './helpers';
 
 const file = getInputFileData();
 !file && process.exit(1);
 
-const lines = file.split('\n');
-lines.pop();
-const wordLine = lines.pop();
+const lines = splitFileIntoLines(file);
 
-const firstLineStates = lines[0].split(';');
-lines.shift();
-
-const initialState: State = new State(firstLineStates[0].trim());
-const finalState: State = new State(firstLineStates[1].trim());
+const { initialState, finalState } = getInitialAndFinalStates(lines);
 const automata = new Automata(initialState, [finalState]);
 
-const word = wordLine.split(':')[1].trim();
+const word = getWord(lines);
 fillTransitionAutomataFunction(automata, lines);
 
 const outputFilePath = path.join(__dirname, '../output');
