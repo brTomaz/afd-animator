@@ -13,7 +13,7 @@ The project consists of producing a frame for each stage of the instantaneous co
    `$ yarn install`
 
 4. Build project:
-   `$ yarn build
+   `$ yarn build`
 
 6. Run
    `$ yarn start <FILEPATH>`
