@@ -5,14 +5,17 @@ import chalk from 'chalk';
 import Automata from './entities/Automata';
 import getInputFileData from './utils/get-input-file-data';
 import {
-  fillTransitionAutomataFunction,
-  generateAnimation,
-  generateDotFiles,
-  generateImages,
   getInitialAndFinalStates,
   getWord,
   splitFileIntoLines,
 } from './helpers';
+
+import {
+  fillTransitionAutomataFunction,
+  generateAnimation,
+  generateDotFiles,
+  generateImages,
+} from './usecases';
 
 const file = getInputFileData();
 !file && process.exit(1);

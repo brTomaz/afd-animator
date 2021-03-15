@@ -1,10 +1,10 @@
 import Automata from '../../src/entities/Automata';
 import {
-  fillTransitionAutomataFunction,
   getInitialAndFinalStates,
   getWord,
   splitFileIntoLines,
 } from '../../src/helpers';
+import { fillTransitionAutomataFunction } from '../../src/usecases';
 import mockAcceptedWordFile from '../mocks/mock-accepted-word-file';
 import mockWordNotAcceptedFile from '../mocks/mock-word-not-accepted-file';
 
