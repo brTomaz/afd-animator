@@ -40,8 +40,10 @@ export default function generateDotFiles(
     }
   }
   const quantLinesTransitionFunction = automata.transitionFunction.size;
+  const linesOfDefaultStructure = quantLinesTransitionFunction * 2;
+  const shift = 2;
   const lastContentLineIndex =
-    outputFileBreaked.length - quantLinesTransitionFunction - 2;
+    outputFileBreaked.length - linesOfDefaultStructure - shift;
   let line = outputFileBreaked[lastContentLineIndex];
   const firstSymbol = line.split(' ')[6];
   const finalStateColor = isWordAccepted ? 'springgreen' : 'red';

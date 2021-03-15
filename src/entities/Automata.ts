@@ -54,7 +54,15 @@ export default class Automata {
     };
   };
 
-  createAutomataStructure = () => {
+  private isAFinalState = (state: string) => {
+    for (const s of this.finalStates) {
+      const isFinal = s.getName() === state;
+      if (isFinal) return true;
+    }
+    return false;
+  };
+
+  private createAutomataStructure = () => {
     let structure = '';
 
     this.transitionFunction.forEach((dest, key) => {
@@ -62,6 +70,9 @@ export default class Automata {
       const source = keyFields[0];
       const symbol = keyFields[1];
       const line = `
+      ${source} [shape=${
+        this.isAFinalState(source) ? 'doublecircle' : 'circle'
+      }]
       ${source} -> ${dest.getName()} [label=${symbol}]`;
       structure += line;
     });
