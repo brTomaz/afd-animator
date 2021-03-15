@@ -4,7 +4,10 @@ import { readFileSync } from 'fs';
 export default function getInputFileData() {
   if (process.argv.length < 3) {
     const errorMessage = 'ERRO! Caminho do arquivo não fornecido.';
-    const correctUsageMessage = 'Uso: yarn dev CAMINHO_DO_ARQUIVO';
+
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const command = isDevelopment ? 'dev' : 'start';
+    const correctUsageMessage = `Uso: yarn ${command} <FILEPATH>`;
 
     console.error(chalk.red(errorMessage));
     console.log(correctUsageMessage + '\n');

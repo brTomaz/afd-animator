@@ -31,7 +31,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/src/app.js",
-    "dev": "ts-node ./src/app.ts",
+    "dev": "export NODE_ENV=development && ts-node ./src/app.ts",
     "test": "jest",
     "test:staged": "jest"
   },
