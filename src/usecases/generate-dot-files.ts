@@ -1,7 +1,7 @@
 import { mkdirSync, rmdirSync } from 'fs';
 
 import Automata from '../entities/Automata';
-import createDotFiles from '../utils/create-dot-file';
+import createDotFile from '../utils/create-dot-file';
 
 export default function generateDotFiles(
   outputFilePath: string,
@@ -28,7 +28,7 @@ export default function generateDotFiles(
       outputFileBreaked[it] = line;
       outputFileContent = outputFileBreaked.join('\n');
       numberOfImages++;
-      createDotFiles(
+      createDotFile(
         `output_${numberOfImages}`,
         outputFilePath,
         outputFileContent
@@ -51,7 +51,7 @@ export default function generateDotFiles(
   outputFileBreaked[lastContentLineIndex] = line;
   outputFileContent = outputFileBreaked.join('\n');
 
-  createDotFiles(
+  createDotFile(
     `output_${numberOfImages + 1}`,
     outputFilePath,
     outputFileContent
