@@ -6,7 +6,7 @@ The project consists of producing a frame for each stage of the instantaneous co
 1. Clone the repository to your local machine:
    `$ git clone https://github.com/brTomaz/afd-animator.git`
 
-2. Enter in the directory of the project:
+2. Enter the directory of the project:
    `$ cd afd-animator`
 
 3. Install the dependencies:

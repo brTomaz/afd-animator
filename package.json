@@ -30,8 +30,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/app.js",
-    "dev": "export NODE_ENV=development && ts-node ./src/app.ts",
+    "start": "node ./dist/main/app.js",
+    "dev": "export NODE_ENV=development && ts-node ./src/main/app.ts",
     "test": "jest",
     "test:staged": "jest"
   },

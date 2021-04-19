@@ -1,7 +1,7 @@
 import path from 'path';
 import { writeFileSync } from 'fs';
 
-export default function createDotFile(
+export default function createDotfile(
   filename: string,
   filepath: string,
   content: string
