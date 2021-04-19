@@ -1,0 +1,6 @@
+par ; par
+par 0 > impar
+par 1 > impar
+impar 0 > par
+impar 1 > par
+wrd: 00101010

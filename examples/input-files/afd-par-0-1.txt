@@ -1,0 +1,10 @@
+pp ; pp
+pp 0 > ip
+pp 1 > pi
+ip 0 > pp
+ip 1 > ii
+ii 0 > pi
+ii 1 > ip
+pi 0 > ii
+pi 1 > pp
+wrd: 11001100
