@@ -15,7 +15,7 @@ enum Colors {
 enum Messages {
   ACCEPTED = 'A palavra fornecida foi aceita.',
   UNACCEPTED = 'A palavra fornecida não foi aceita.',
-  ERROR = 'Uma ou mais opções de processamento navegou para o estado de erro',
+  ERROR = 'Uma ou mais opções de processamento navegaram para o estado de erro',
 }
 
 enum Symbols {
